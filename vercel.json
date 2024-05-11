@@ -1,12 +1,12 @@
-{   
-    "version": 2,
-    "builds": [
-      { "src": "*.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-        { "src": "/.*", "dest": "/api" }
-    ],
-    "regions": [
-        "sfo1"
-    ]
+{
+  "version": 2,
+  "builds": [
+    { "src": "*.js", "use": "@vercel/node" }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
 }
